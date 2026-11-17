@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <!-- Esta página vive en feria/, pero sus archivos se toman desde la raíz del sitio. -->
+  <base href="../">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; media-src 'self' data: blob:; connect-src 'self' https://aiwaqixszhurabaqgulv.supabase.co wss://aiwaqixszhurabaqgulv.supabase.co; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>¡Almaraz en la Feria!</title>
+  <meta name="description" content="Ayuda al Presidente Municipal Miguel Ángel Almaraz a cuidar la feria: saca a los colados, toma decisiones, juega lotería y mantén contenta a la gente. Juego gratis para celular y computadora.">
+  <meta name="theme-color" content="#1f1a27">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="¡Almaraz en la Feria!">
+  <meta property="og:description" content="Saca a los colados, toma decisiones, juega lotería y mantén contenta a la gente de la feria.">
+  <meta property="og:image" content="https://rreyes0424.github.io/escape-almaraz/assets/juegos/feria.jpg">
+  <meta property="og:url" content="https://rreyes0424.github.io/escape-almaraz/feria/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" href="assets/icono-64.png" type="image/png" sizes="64x64">
+  <link rel="icon" href="assets/icono-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icono-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="assets/fonts/bangers-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/comicneue-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="feria.90923858.css">
+</head>
+<body class="feria">
+  <div id="app">
+    <canvas id="game" aria-label="Juego"></canvas>
+
+    <div id="gamearea">
+      <div id="hud" class="hidden">
+        <button id="btnPause" class="round" aria-label="Pausa">❚❚</button>
+        <button id="btnMute" class="round" aria-label="Sonido">🔊</button>
+      </div>
+    </div>
+
+    <!-- Portada -->
+    <section id="ftitle" class="screen">
+      <div id="online" class="online-badge hidden"></div>
+      <div class="ft-wrap">
+        <div class="kicker">Miguel Ángel Almaraz en:</div>
+        <h1 class="logo"><span class="l1">¡ALMARAZ</span><span class="l2">EN LA FERIA!</span></h1>
+        <div class="menu">
+          <button id="fbPlay" class="big">▶ JUGAR</button>
+          <button id="fbEndless" class="mid">∞ NOCHE SIN FIN</button>
+          <div class="menu-links">
+            <button id="fbHow" class="link">❓ Cómo jugar</button>
+            <button id="fbShop" class="link">🛒 Tienda</button>
+            <button id="fbBoard" class="link hidden">🏆 Puntajes</button>
+            <a class="link" href="./">🎮 Más juegos</a>
+          </div>
+        </div>
+        <div id="frecords" class="records"></div>
+      </div>
+      <div class="title-footer">
+        <span>Inspirado en la feria de Río Bravo</span>
+        <span class="credit">Un juego de <b>Ricardo Reyes</b></span>
+        <button id="fbMute" class="link">🔊 Sonido: sí</button>
+      </div>
+    </section>
+
+    <section id="fnights" class="screen modal hidden"></section>
+    <section id="fbrief" class="screen modal hidden"></section>
+    <section id="fhowto" class="screen modal hidden"></section>
+    <section id="fpause" class="screen modal hidden">
+      <div class="card">
+        <div class="burst-title">PAUSA</div>
+        <div class="row"><button class="big" data-act="resume">▶ CONTINUAR</button></div>
+        <div class="row">
+          <button class="mid" data-act="restart">↻ Reiniciar</button>
+          <button class="mid" data-act="menu">Menú</button>
+        </div>
+        <div id="fpauseGoals"></div>
+        <p class="help">Toca (o da clic) a quien se quiere colar y en los avisos de problemas. El presidente va hasta ahí.</p>
+      </div>
+    </section>
+    <section id="fend" class="screen modal hidden"></section>
+    <section id="fsave" class="screen modal hidden"></section>
+    <section id="fboard" class="screen modal hidden"></section>
+    <section id="fdecision" class="screen modal hidden"></section>
+    <section id="fperk" class="screen modal hidden"></section>
+    <section id="fshop" class="screen modal hidden"></section>
+
+    <div id="rotate" class="hidden">
+      <div class="rot-icon">📱</div>
+      <p>Gira tu celular para jugar en pantalla completa</p>
+      <small>(toca para continuar así)</small>
+    </div>
+    <div id="toast" role="status"></div>
+    <noscript><p class="noscript">Este juego necesita JavaScript activado.</p></noscript>
+  </div>
+
+  <script src="feria.668fa983.js"></script>
+</body>
+</html>
